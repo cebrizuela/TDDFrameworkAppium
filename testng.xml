@@ -9,7 +9,9 @@
         <parameter name="avd" value="AndroidCurso" />
         <parameter name="systemPort" value="10000" />
         <parameter name="chromeDriverPort" value="11000" />
-      
+      <classes>
+      <class name="com.qa.tests.LoginTests"/>
+      </classes>
     </test>
 
 </suite> <!-- Suite -->
