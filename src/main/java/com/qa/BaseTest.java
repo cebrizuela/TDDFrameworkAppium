@@ -31,12 +31,12 @@ import org.testng.annotations.*;
 // En esta clase se inicializara el driver 
 public class BaseTest {
   
-	protected AppiumDriver driver;
-	protected Properties props;
+	protected static AppiumDriver driver;
+	protected static Properties props;
 	InputStream inputStream; // se usa para cuando el fichero donde esta la property no se encuentra en el mismo paquete que la clase que lo llama
 
 	
-	public void BaseTest() {
+	public  BaseTest() {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
@@ -80,15 +80,17 @@ public class BaseTest {
            
            driver = new AndroidDriver(url, desiredCapability);
            String sessionId = driver.getSessionId().toString();
+           System.out.println(sessionId);
 		
 	} catch (Exception e) {
 		e.printStackTrace();
+		
 	}
   }
 
   public void waitForVisibility(MobileElement e) {
-  WebDriverWait wait = new WebDriverWait(driver, TestUtils.Wait);
-  wait.until(ExpectedConditions.invisibilityOf(e));
+	  WebDriverWait wait = new WebDriverWait(driver, TestUtils.WAIT);
+	  wait.until(ExpectedConditions.visibilityOf(e));
   }
   
   public void click(MobileElement e) {
@@ -101,9 +103,9 @@ public class BaseTest {
 	  e.sendKeys(txt);
   }
   
-  public void getAtTribute(MobileElement e, String attribute) {
+  public String getAttribute(MobileElement e, String attribute) {
 	  waitForVisibility(e);
-	  e.getAttribute(attribute);
+	 return e.getAttribute(attribute);
   }
   
   
