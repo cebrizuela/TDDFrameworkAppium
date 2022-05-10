@@ -11,8 +11,16 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.lang.reflect.Method;
 
+import javax.xml.soap.Detail;
+
+import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
@@ -20,9 +28,25 @@ public class LoginTests extends BaseTest{
 	
 	LoginPage loginPage;
 	ProductsPage productsPage;
+	InputStream datais;
+	JSONObject loginUsers;
 
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass() throws IOException {
+		try {
+			String dataFileName = "data/loginUser.json";
+			System.out.println(dataFileName);
+			datais = getClass().getClassLoader().getResourceAsStream(dataFileName);	
+			JSONTokener tokener = new JSONTokener(datais);
+			loginUsers = new JSONObject(tokener);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (datais != null) {
+				datais.close();
+			}
+		}
+		
 	}
 
 	@AfterClass
@@ -33,8 +57,8 @@ public class LoginTests extends BaseTest{
 	@BeforeMethod
 	public void beforeMethod(Method m) {
 		
-		//productsPage = new ProductsPage();
 		
+		/// La clase Method se utiliza para obtener el nombre del metodo
 		System.out.println("\n" + "****** starting test: " + m.getName() + "*****" + "\n");
 		loginPage = new LoginPage();
 		
@@ -45,23 +69,23 @@ public class LoginTests extends BaseTest{
 	}
 	
 	 @Test
-	  public void invalidUserName() {
-		  loginPage.enterUserName("clara");
-		  loginPage.enterPassword("clara");
-		  loginPage.pressLoginButton();
-		  
-		  String actualErrTxt = loginPage.getErrTxt();
-		  String expectedErrTxt = "Username and password do not match any user in this service.";
-		  
-		  System.out.println("actual error txt - " + actualErrTxt + "\n" + "expected error txt - " + expectedErrTxt );
-		  
-		  Assert.assertEquals(actualErrTxt, expectedErrTxt);
-	  }
+		public void invalidUserName() {
+			loginPage.enterUserName(loginUsers.getJSONObject("invalidUser").getString("username"));
+			loginPage.enterPassword(loginUsers.getJSONObject("invalidUser").getString("password"));
+			loginPage.pressLoginButton();
+
+			String actualErrTxt = loginPage.getErrTxt();
+			String expectedErrTxt = "Username and password do not match any user in this service.";
+
+			System.out.println("actual error txt - " + actualErrTxt + "\n" + "expected error txt - " + expectedErrTxt);
+			Assert.assertEquals(actualErrTxt, expectedErrTxt);
+
+		}
 	  
 	  @Test
 	  public void invalidPassword() {
-		  loginPage.enterUserName("standard_user");
-		  loginPage.enterPassword("clara");
+		  loginPage.enterUserName(loginUsers.getJSONObject("invalidPassword").getString("username"));
+			loginPage.enterPassword(loginUsers.getJSONObject("invalidPassword").getString("password"));
 		  loginPage.pressLoginButton();
 		  
 		  String actualErrTxt = loginPage.getErrTxt();
@@ -74,8 +98,8 @@ public class LoginTests extends BaseTest{
 	  
 		
 		  @Test public void successfulLogin() {
-			  loginPage.enterUserName("standard_user");
-			  loginPage.enterPassword("secret_sauce");
+			  loginPage.enterUserName(loginUsers.getJSONObject("validUser").getString("username"));
+				loginPage.enterPassword(loginUsers.getJSONObject("validUser").getString("password"));
 			  loginPage.pressLoginButton();
 			
 		  productsPage = new ProductsPage();
