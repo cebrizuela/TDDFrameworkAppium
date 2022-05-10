@@ -168,6 +168,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.qa.listeners.TestListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Pixel_2&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;emulator&quot; value=&quot;true&quot;/&gt;
     &lt;parameter name=&quot;chromeDriverPort&quot; value=&quot;11000&quot;/&gt;
@@ -219,22 +222,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'invalidPassword')
+data.setCell(0, 1, 'successfulLogin')
 data.setCell(0, 2, 'com.qa.tests.LoginTests')
-data.setCell(0, 3, 4434);
+data.setCell(0, 3, 3577);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'successfulLogin')
+data.setCell(1, 1, 'invalidPassword')
 data.setCell(1, 2, 'com.qa.tests.LoginTests')
-data.setCell(1, 3, 3546);
+data.setCell(1, 3, 3390);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'invalidUserName')
 data.setCell(2, 2, 'com.qa.tests.LoginTests')
-data.setCell(2, 3, 2447);
+data.setCell(2, 3, 2448);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -267,51 +270,51 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">11846 ms</span>
+                <span class="method-start">11199 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidPassword())</span>
-                <span class="method-start">11858 ms</span>
+                <span class="method-start">11215 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidPassword</span>
-                <span class="method-start">12094 ms</span>
+                <span class="method-start">11369 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">16530 ms</span>
+                <span class="method-start">14762 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidUserName())</span>
-                <span class="method-start">16531 ms</span>
+                <span class="method-start">14762 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidUserName</span>
-                <span class="method-start">16533 ms</span>
+                <span class="method-start">14764 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">18981 ms</span>
+                <span class="method-start">17213 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.successfulLogin())</span>
-                <span class="method-start">18982 ms</span>
+                <span class="method-start">17214 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">successfulLogin</span>
-                <span class="method-start">18984 ms</span>
+                <span class="method-start">17215 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">22531 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">22532 ms</span>
+                <span class="method-start">20793 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">20793 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">22533 ms</span>
+                <span class="method-start">20795 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
