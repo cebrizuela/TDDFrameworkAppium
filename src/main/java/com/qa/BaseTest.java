@@ -18,6 +18,7 @@ import org.testng.annotations.BeforeTest;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Properties;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -33,8 +34,11 @@ public class BaseTest {
   
 	protected static AppiumDriver driver;
 	protected static Properties props;
-	InputStream inputStream; // se usa para cuando el fichero donde esta la property no se encuentra en el mismo paquete que la clase que lo llama
-
+	InputStream inputStream; // se utiliza para leer ficheros
+	
+	protected static HashMap<String,String> strings = new HashMap<String,String>();
+	InputStream inputStrings;
+	TestUtils utils;
 	
 	public  BaseTest() {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -44,14 +48,24 @@ public class BaseTest {
   @BeforeTest
   public void beforeTest(String platformName, String udid, String deviceName, String avd) throws Exception { 
 	   try {
-		   props = new Properties();
 		   
+		   // Codigo para acceder a file de configuracion
+		   props = new Properties();
 		   // Codigo para cuando el fichero donde esta la property no se encuentra en el mismo paquete que la clase que lo llama
 		   String propFileName = "config.properties"; // nombre del fichero donde esta las propiedades
 		   inputStream =getClass().getClassLoader().getResourceAsStream(propFileName);
-		   
 		   //Este codigo permite cargar las propiedades en la variable props
 		   props.load(inputStream);
+		   
+		   
+		   
+		   //Codigo para acceder al xml
+		   String xmlFileName = "strings/strings.xml";
+		   inputStrings = getClass().getClassLoader().getResourceAsStream(xmlFileName);
+		   utils = new TestUtils();
+		   strings = utils.parseStringXML(inputStrings);
+		   
+		   
 		   
 		   
 		   
@@ -85,6 +99,15 @@ public class BaseTest {
 	} catch (Exception e) {
 		e.printStackTrace();
 		
+	} finally {
+		/// Se usa para cerrar los ficheros 
+		if (inputStream != null) {
+			inputStream.close();
+		}
+		
+		if (inputStrings != null) {
+			inputStrings.close();
+		}
 	}
   }
 
