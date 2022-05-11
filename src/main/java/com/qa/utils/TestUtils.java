@@ -14,9 +14,7 @@ import org.w3c.dom.NodeList;
 public class TestUtils {
 	
 	public static final long WAIT = 10;
-	
 
-	
 	
 	//Codigo para parsear un XML
 	public HashMap<String, String> parseStringXML(InputStream file) throws Exception{
