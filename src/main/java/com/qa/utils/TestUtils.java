@@ -17,6 +17,7 @@ public class TestUtils {
 	
 
 	
+	
 	//Codigo para parsear un XML
 	public HashMap<String, String> parseStringXML(InputStream file) throws Exception{
 		HashMap<String, String> stringMap = new HashMap<String, String>();
