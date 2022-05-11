@@ -28,6 +28,8 @@ public class LoginTests extends BaseTest{
 	
 	LoginPage loginPage;
 	ProductsPage productsPage;
+	
+	// variables utilizadas para leer el Json
 	InputStream datais;
 	JSONObject loginUsers;
 	
@@ -40,6 +42,7 @@ public class LoginTests extends BaseTest{
 			JSONTokener tokener = new JSONTokener(datais);
 			
 			loginUsers = new JSONObject(tokener);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
