@@ -81,8 +81,12 @@ public class BaseTest {
 
            // Para instalar la App
 		   // Para generar la url de la app
-		   URL appUrl = getClass().getClassLoader().getResource(props.getProperty("androidAppLocation"));
-		   System.out.println(appUrl);
+		  // URL appUrl = getClass().getClassLoader().getResource(props.getProperty("androidAppLocation"));
+		  // System.out.println(appUrl);
+		   
+		   String appUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator
+                   + "resources" +  props.getProperty("androidAppLocation") ;
+		  
            desiredCapability.setCapability(MobileCapabilityType.APP, appUrl);
 
 

@@ -24,22 +24,22 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Suite">
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
               <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
                     <span>C:\Users\clara.brizuela\Documents\Automation\Appium-TDDFramework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -103,18 +103,18 @@
                     </span>
                     <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.tests.LoginTests" hash-for-method="invalidPassword">invalidPassword</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidPassword">invalidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.tests.LoginTests" hash-for-method="invalidUserName">invalidUserName</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidUserName">invalidUserName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.tests.LoginTests" hash-for-method="successfulLogin">successfulLogin</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="successfulLogin">successfulLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -167,11 +167,11 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.qa.listeners.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Pixel_2&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Pixel_2&quot;&gt;
     &lt;parameter name=&quot;emulator&quot; value=&quot;true&quot;/&gt;
     &lt;parameter name=&quot;chromeDriverPort&quot; value=&quot;11000&quot;/&gt;
     &lt;parameter name=&quot;platformName&quot; value=&quot;Android&quot;/&gt;
@@ -222,22 +222,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'successfulLogin')
+data.setCell(0, 1, 'invalidPassword')
 data.setCell(0, 2, 'com.qa.tests.LoginTests')
-data.setCell(0, 3, 5115);
+data.setCell(0, 3, 4028);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'invalidPassword')
+data.setCell(1, 1, 'successfulLogin')
 data.setCell(1, 2, 'com.qa.tests.LoginTests')
-data.setCell(1, 3, 4683);
+data.setCell(1, 3, 3136);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'invalidUserName')
 data.setCell(2, 2, 'com.qa.tests.LoginTests')
-data.setCell(2, 3, 2828);
+data.setCell(2, 3, 2328);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -270,51 +270,51 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">65247 ms</span>
+                <span class="method-start">12359 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidPassword())</span>
-                <span class="method-start">65258 ms</span>
+                <span class="method-start">12374 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidPassword</span>
-                <span class="method-start">65385 ms</span>
+                <span class="method-start">12512 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">70070 ms</span>
+                <span class="method-start">16542 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidUserName())</span>
-                <span class="method-start">70071 ms</span>
+                <span class="method-start">16543 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidUserName</span>
-                <span class="method-start">70113 ms</span>
+                <span class="method-start">16545 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.successfulLogin())</span>
-                <span class="method-start">72943 ms</span>
+                <span class="method-start">18875 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">72943 ms</span>
+                <span class="method-start">18875 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">successfulLogin</span>
-                <span class="method-start">72944 ms</span>
+                <span class="method-start">18876 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">78060 ms</span>
+                <span class="method-start">22013 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">78061 ms</span>
+                <span class="method-start">22014 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">78063 ms</span>
+                <span class="method-start">22015 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
