@@ -17,11 +17,6 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.lang.reflect.Method;
 
-<<<<<<< HEAD
-
-=======
-//import javax.xml.soap.Detail;
->>>>>>> d1fffca526600f0ba0a5e6f9be91e7861f197311
 
 import org.json.JSONObject;
 import org.json.JSONTokener;
