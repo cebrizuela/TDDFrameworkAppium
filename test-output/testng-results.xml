@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="0" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-17T14:18:49 UYT" name="Suite" finished-at="2022-05-17T14:19:05 UYT" duration-ms="15967">
+  <suite started-at="2022-05-17T18:37:20 UYT" name="Suite" finished-at="2022-05-17T18:37:39 UYT" duration-ms="18669">
     <groups>
     </groups>
-    <test started-at="2022-05-17T14:18:49 UYT" name="Pixel_2" finished-at="2022-05-17T14:19:05 UYT" duration-ms="15967">
+    <test started-at="2022-05-17T18:37:20 UYT" name="Pixel_2" finished-at="2022-05-17T18:37:39 UYT" duration-ms="18669">
       <class name="com.qa.tests.LoginTests">
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:18:49 UYT" name="beforeTest" finished-at="2022-05-17T14:18:55 UYT" duration-ms="6121" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:20 UYT" name="beforeTest" finished-at="2022-05-17T18:37:38 UYT" duration-ms="18108" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,7 +21,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[pixel_3]]>
+                <![CDATA[pixel_5]]>
               </value>
             </param>
             <param index="3">
@@ -33,11 +33,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:18:55 UYT" name="beforeClass" finished-at="2022-05-17T14:18:55 UYT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:38 UYT" name="beforeClass" finished-at="2022-05-17T18:37:38 UYT" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:18:55 UYT" name="beforeMethod" finished-at="2022-05-17T14:18:55 UYT" duration-ms="139" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:38 UYT" name="beforeMethod" finished-at="2022-05-17T18:37:38 UYT" duration-ms="82" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -45,60 +45,270 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+at com.qa.BaseTest.<init>(BaseTest.java:44)
+at com.qa.pages.LoginPage.<init>(LoginPage.java:9)
+at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+at java.base/java.lang.Class.getMethod(Class.java:2227)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+... 42 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="invalidPassword()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:18:55 UYT" name="invalidPassword" finished-at="2022-05-17T14:18:59 UYT" duration-ms="3932" status="PASS">
+        <test-method signature="invalidPassword()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:38 UYT" name="invalidPassword" finished-at="2022-05-17T18:37:38 UYT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+at com.qa.BaseTest.<init>(BaseTest.java:44)
+at com.qa.pages.LoginPage.<init>(LoginPage.java:9)
+at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+at java.base/java.lang.Class.getMethod(Class.java:2227)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+... 42 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidPassword -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:18:59 UYT" name="afterMethod" finished-at="2022-05-17T14:18:59 UYT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="afterMethod" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1652823459024" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:18:59 UYT" name="beforeMethod" finished-at="2022-05-17T14:18:59 UYT" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.tests.LoginTests.invalidUserName()]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="beforeMethod" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1652823459039" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="invalidUserName()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:18:59 UYT" name="invalidUserName" finished-at="2022-05-17T14:19:02 UYT" duration-ms="2463" status="PASS">
+        <test-method signature="invalidUserName()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="invalidUserName" finished-at="2022-05-17T18:37:39 UYT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+at com.qa.BaseTest.<init>(BaseTest.java:44)
+at com.qa.pages.LoginPage.<init>(LoginPage.java:9)
+at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+at java.base/java.lang.Class.getMethod(Class.java:2227)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+... 42 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidUserName -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:19:02 UYT" name="afterMethod" finished-at="2022-05-17T14:19:02 UYT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="afterMethod" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1652823459097" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:19:02 UYT" name="beforeMethod" finished-at="2022-05-17T14:19:02 UYT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.qa.tests.LoginTests.successfulLogin()]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="beforeMethod" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1652823459109" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="successfulLogin()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:19:02 UYT" name="successfulLogin" finished-at="2022-05-17T14:19:05 UYT" duration-ms="3053" status="PASS">
+        <test-method signature="successfulLogin()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="successfulLogin" finished-at="2022-05-17T18:37:39 UYT" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+at com.qa.BaseTest.<init>(BaseTest.java:44)
+at com.qa.pages.LoginPage.<init>(LoginPage.java:9)
+at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+at java.base/java.lang.Class.getMethod(Class.java:2227)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+... 42 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulLogin -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:19:05 UYT" name="afterMethod" finished-at="2022-05-17T14:19:05 UYT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="afterMethod" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1652823459143" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:19:05 UYT" name="afterClass" finished-at="2022-05-17T14:19:05 UYT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="afterClass" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1652823459156" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.qa.tests.LoginTests@26d9b808]" started-at="2022-05-17T14:19:05 UYT" name="afterTest" finished-at="2022-05-17T14:19:05 UYT" duration-ms="221" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.qa.tests.LoginTests@a567e72]" started-at="2022-05-17T18:37:39 UYT" name="afterTest" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1652823459203" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

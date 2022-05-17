@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>testng.xml</span>
+                    <span>D:\Selenium\ProyectosRepositorio\TDDFrameworkAppium\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,31 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods,  3 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidPassword">invalidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidUserName">invalidUserName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="successfulLogin">successfulLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -129,9 +129,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.qa.tests.LoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -140,6 +140,34 @@
                   <a name="invalidPassword">
                   </a> <!-- invalidPassword -->
                   <span class="method-name">invalidPassword</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at com.qa.BaseTest.&lt;init&gt;(BaseTest.java:44)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+	... 42 more
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -147,6 +175,34 @@
                   <a name="invalidUserName">
                   </a> <!-- invalidUserName -->
                   <span class="method-name">invalidUserName</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at com.qa.BaseTest.&lt;init&gt;(BaseTest.java:44)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+	... 42 more
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -154,14 +210,42 @@
                   <a name="successfulLogin">
                   </a> <!-- successfulLogin -->
                   <span class="method-name">successfulLogin</span>
+                  <div class="stack-trace">java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at com.qa.BaseTest.&lt;init&gt;(BaseTest.java:44)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+	... 42 more
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Volumes/HD - Datos - Datos/Selenium/Repositorio/TDDFrameworkAppium/testng.xml</span>
+            <span class="header-content">D:\Selenium\ProyectosRepositorio\TDDFrameworkAppium\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -176,7 +260,7 @@
     &lt;parameter name=&quot;chromeDriverPort&quot; value=&quot;11000&quot;/&gt;
     &lt;parameter name=&quot;platformName&quot; value=&quot;Android&quot;/&gt;
     &lt;parameter name=&quot;udid&quot; value=&quot;emulator-5554&quot;/&gt;
-    &lt;parameter name=&quot;deviceName&quot; value=&quot;pixel_3&quot;/&gt;
+    &lt;parameter name=&quot;deviceName&quot; value=&quot;pixel_5&quot;/&gt;
     &lt;parameter name=&quot;avd&quot; value=&quot;Pixel5_Android11&quot;/&gt;
     &lt;parameter name=&quot;systemPort&quot; value=&quot;10000&quot;/&gt;
     &lt;classes&gt;
@@ -222,22 +306,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'invalidPassword')
+data.setCell(0, 1, 'invalidUserName')
 data.setCell(0, 2, 'com.qa.tests.LoginTests')
-data.setCell(0, 3, 3932);
+data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'successfulLogin')
 data.setCell(1, 2, 'com.qa.tests.LoginTests')
-data.setCell(1, 3, 3053);
+data.setCell(1, 3, 0);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'invalidUserName')
+data.setCell(2, 1, 'invalidPassword')
 data.setCell(2, 2, 'com.qa.tests.LoginTests')
-data.setCell(2, 3, 2463);
+data.setCell(2, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -265,56 +349,58 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(Android, emulator-5554, pixel_3, Pixel5_Android11)</span>
+                <span class="method-name">beforeTest(Android, emulator-5554, pixel_5, Pixel5_Android11)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">6132 ms</span>
+                <span class="method-start">18215 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidPassword())</span>
-                <span class="method-start">6145 ms</span>
+                <span class="method-start">18273 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidPassword</span>
-                <span class="method-start">6284 ms</span>
+                <span class="method-start">18430 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">10218 ms</span>
+                <span class="method-start">18459 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidUserName())</span>
-                <span class="method-start">10219 ms</span>
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">18474 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidUserName</span>
-                <span class="method-start">10221 ms</span>
+                <span class="method-start">18480 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">12684 ms</span>
+                <span class="method-start">18532 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.successfulLogin())</span>
-                <span class="method-start">12685 ms</span>
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">18544 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">successfulLogin</span>
-                <span class="method-start">12685 ms</span>
+                <span class="method-start">18550 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">15738 ms</span>
+                <span class="method-start">18578 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">15739 ms</span>
+                <span class="method-start">18591 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">15740 ms</span>
+                <span class="method-start">18638 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

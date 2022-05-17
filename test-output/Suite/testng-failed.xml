@@ -9,8 +9,8 @@
     <parameter name="chromeDriverPort" value="11000"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="udid" value="emulator-5554"/>
-    <parameter name="deviceName" value="pixel_3"/>
-    <parameter name="avd" value="AndroidCurso"/>
+    <parameter name="deviceName" value="pixel_5"/>
+    <parameter name="avd" value="Pixel5_Android11"/>
     <parameter name="systemPort" value="10000"/>
     <classes>
       <class name="com.qa.tests.LoginTests">

@@ -9,12 +9,124 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Pixel_2</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">15,967</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Pixel_2</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">18,669</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Pixel_2 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.qa.tests.LoginTests</td><td><a href="#m0">invalidPassword</a></td><td rowspan="1">1652807935760</td><td rowspan="1">3932</td></tr><tr class="passedeven"><td><a href="#m1">invalidUserName</a></td><td rowspan="1">1652807939697</td><td rowspan="1">2463</td></tr><tr class="passedeven"><td><a href="#m2">successfulLogin</a></td><td rowspan="1">1652807942161</td><td rowspan="1">3053</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Pixel_2 &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.qa.tests.LoginTests</td><td><a href="#m0">beforeMethod</a></td><td rowspan="1">1652823458838</td><td rowspan="1">82</td></tr><tr><th colspan="4">Pixel_2 &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="7">com.qa.tests.LoginTests</td><td><a href="#m1">afterClass</a></td><td rowspan="1">1652823459156</td><td rowspan="1">-1652823459156</td></tr><tr class="skippedeven"><td><a href="#m2">afterMethod</a></td><td rowspan="3">1652823459024</td><td rowspan="3">-1652823459024</td></tr><tr class="skippedeven"><td><a href="#m3">afterMethod</a></td></tr><tr class="skippedeven"><td><a href="#m4">afterMethod</a></td></tr><tr class="skippedeven"><td><a href="#m5">afterTest</a></td><td rowspan="1">1652823459203</td><td rowspan="1">-1652823459203</td></tr><tr class="skippedeven"><td><a href="#m6">beforeMethod</a></td><td rowspan="2">1652823459039</td><td rowspan="2">-1652823459039</td></tr><tr class="skippedeven"><td><a href="#m7">beforeMethod</a></td></tr><tr><th colspan="4">Pixel_2 &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">com.qa.tests.LoginTests</td><td><a href="#m8">invalidPassword</a></td><td rowspan="1">1652823458995</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m9">invalidUserName</a></td><td rowspan="1">1652823459045</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m10">successfulLogin</a></td><td rowspan="1">1652823459115</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Pixel_2</h2><h3 id="m0">com.qa.tests.LoginTests#invalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qa.tests.LoginTests#invalidUserName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.qa.tests.LoginTests#successfulLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Pixel_2</h2><h3 id="m0">com.qa.tests.LoginTests#beforeMethod</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>public void com.qa.tests.LoginTests.invalidPassword()</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at com.qa.BaseTest.&lt;init&gt;(BaseTest.java:44)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+	... 42 more
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.qa.tests.LoginTests#afterClass</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.qa.tests.LoginTests#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.qa.tests.LoginTests#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.qa.tests.LoginTests#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.qa.tests.LoginTests#afterTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.qa.tests.LoginTests#beforeMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.qa.tests.LoginTests#beforeMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.qa.tests.LoginTests#invalidPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at com.qa.BaseTest.&lt;init&gt;(BaseTest.java:44)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+	... 42 more
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.qa.tests.LoginTests#invalidUserName</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at com.qa.BaseTest.&lt;init&gt;(BaseTest.java:44)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+	... 42 more
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.qa.tests.LoginTests#successfulLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:85)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:92)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:148)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:204)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:66)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:53)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:56)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:154)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:113)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:105)
+	at com.qa.BaseTest.&lt;init&gt;(BaseTest.java:44)
+	at com.qa.pages.LoginPage.&lt;init&gt;(LoginPage.java:9)
+	at com.qa.tests.LoginTests.beforeMethod(LoginTests.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NoSuchMethodException: jdk.proxy2.$Proxy16.proxyClassLookup()
+	at java.base/java.lang.Class.getMethod(Class.java:2227)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.prepareAnnotationMethods(AppiumByBuilder.java:83)
+	... 42 more
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
