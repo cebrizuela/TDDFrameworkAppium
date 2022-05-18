@@ -7,9 +7,10 @@
 
 		<parameter name="emulator" value="true" />
 		<parameter name="platformName" value="Android" />
-		<parameter name="udid" value="emulator-5554" />
+        <parameter name="udid" value="emulator-5554" /> 
+<!--	<parameter name="udid" value="R28M415FXEX" />  -->
 		<parameter name="deviceName" value="pixel_5" />
-		<parameter name="avd" value="Pixel5_Android11" />
+<!--    <parameter name="avd" value="Pixel5_Android11" /> -->
 		<parameter name="systemPort" value="10000" />
 		<parameter name="chromeDriverPort" value="11000" />
 		<classes>

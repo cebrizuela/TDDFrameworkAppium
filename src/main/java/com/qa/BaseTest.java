@@ -27,8 +27,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
-
-
 // En esta clase se inicializara el driver 
 public class BaseTest {
   
@@ -44,9 +42,11 @@ public class BaseTest {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 	
-  @org.testng.annotations.Parameters({"platformName","udid","deviceName", "avd"})
+//@org.testng.annotations.Parameters({"platformName","udid","deviceName", "avd"})
+  @org.testng.annotations.Parameters({"platformName","udid","deviceName"})
   @BeforeTest
-  public void beforeTest(String platformName, String udid, String deviceName, String avd) throws Exception { 
+//public void beforeTest(String platformName, String udid, String deviceName, String avd) throws Exception {
+  public void beforeTest(String platformName, String udid, String deviceName) throws Exception { 
 	   try {
 		   
 		   // Codigo para acceder a file de configuracion
@@ -75,8 +75,8 @@ public class BaseTest {
 		   desiredCapability.setCapability(MobileCapabilityType.UDID, udid);
 
            //Para iniciar el emulador automaticamente
-		   desiredCapability.setCapability("avd",avd );
-		   desiredCapability.setCapability("avdLauchTimeout", 118000);
+		   //desiredCapability.setCapability("avd",avd );
+		   //desiredCapability.setCapability("avdLauchTimeout", 118000);
 
 
            // Para instalar la App
@@ -86,8 +86,7 @@ public class BaseTest {
 		   
 		   String appUrl = System.getProperty("user.dir") + File.separator + "src" + File.separator + "test" + File.separator
                    + "resources" +  props.getProperty("androidAppLocation") ;
-		  
-           desiredCapability.setCapability(MobileCapabilityType.APP, appUrl);
+		   desiredCapability.setCapability(MobileCapabilityType.APP, appUrl);
 
 
             // Para abrir la app usamos la opcion appPackage de appActivity
