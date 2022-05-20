@@ -14,7 +14,7 @@ public class ProductsPage extends BaseTest{
 	
 	
 	public String getTitle() {
-		return getAttribute(productTitleTxt,"text");
+		return getText(productTitleTxt);
 	}
 	
 }

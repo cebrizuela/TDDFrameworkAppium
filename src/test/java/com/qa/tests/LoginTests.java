@@ -35,6 +35,7 @@ public class LoginTests extends BaseTest{
 	@BeforeClass
 	public void beforeClass() throws IOException {
 		try {
+			// Para cargar los datos del json
 			String dataFileName = "data/loginUser.json";
 			System.out.println(dataFileName);
 			datais = getClass().getClassLoader().getResourceAsStream(dataFileName);	

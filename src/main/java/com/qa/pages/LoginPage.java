@@ -9,25 +9,30 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class LoginPage extends BaseTest{
 	
 	@AndroidFindBy (accessibility = "test-Username") 
+	@iOSXCUITFindBy (id = "test-Username")
 	private MobileElement usernameTxtFld;
 
 	@AndroidFindBy (accessibility = "test-Password") 
+	@iOSXCUITFindBy (id = "test-Password")
 	private MobileElement passwordTxtFld;
 	
 	@AndroidFindBy (accessibility = "test-LOGIN") 
+	@iOSXCUITFindBy (id = "test-LOGIN")
 	private MobileElement loginBtn;
 	
 	@AndroidFindBy (xpath = "//android.view.ViewGroup[@content-desc=\"test-Error message\"]/android.widget.TextView") 
+	@iOSXCUITFindBy (xpath = "//XCUIElementTypeOther[@name=\"test-Error message\"]/child::XCUIElementTypeStaticText")
 	private MobileElement errTxt;
-
 	
 	public LoginPage enterUserName(String username) {
+		clear(usernameTxtFld);
 		sendKeys(usernameTxtFld, username);
 		return this;
 	}
 	
 	
 	public LoginPage enterPassword(String password) {
+		clear(passwordTxtFld);
 		sendKeys(passwordTxtFld, password);
 		return this;
 	}
@@ -38,6 +43,6 @@ public class LoginPage extends BaseTest{
 	}
 
 	public String getErrTxt() {
-		 return getAttribute(errTxt, "text");
+		 return getText(errTxt);
 	}
 }
