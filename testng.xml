@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="tests">
-	<listeners>
-<listener class-name="com.qa.listeners.TestListener"/>
-</listeners>
+
 <!-- 
 	<test name="Test_ledier">
+		<listeners>
+<listener class-name="com.qa.listeners.TestListener"/>
+</listeners>
 
 		<parameter name="emulator" value="true" />
 		<parameter name="platformName" value="Android" />
@@ -20,14 +21,40 @@
 		</classes>
 	</test>
 	-->
-	
+
+
 		<test name="Test_clara">
+			<listeners>
+<listener class-name="com.qa.listeners.TestListener"/>
+</listeners>
 
 		<parameter name="emulator" value="true" />
 		<parameter name="platformName" value="Android" />
 		<parameter name="udid" value="emulator-5554" />
 		<parameter name="deviceName" value="pixel_3" />
 		<parameter name="avd" value="AndroidCurso" />
+		<parameter name="systemPort" value="10000" />
+		<parameter name="chromeDriverPort" value="11000" />
+		<classes>
+			<class name="com.qa.tests.LoginTests">
+			
+			</class>
+		</classes>
+	</test>
+ 
+	
+			<test name="Test_clara_real">
+			<listeners>
+<listener class-name="com.qa.listeners.TestListener"/>
+</listeners>
+
+		<parameter name="emulator" value="false" />
+		<parameter name="platformName" value="Android" />
+		<parameter name="udid" value="ESU4C19517001754" />
+		<parameter name="deviceName" value="JSN L23" />
+		<parameter name="avd" value="" />
+		<parameter name="unlockType" value="pin" />
+		<parameter name="unlockKey" value="900110" />
 		<parameter name="systemPort" value="10000" />
 		<parameter name="chromeDriverPort" value="11000" />
 		<classes>
