@@ -45,9 +45,9 @@ public class BaseTest {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-	@org.testng.annotations.Parameters({ "platformName", "udid", "deviceName", "avd" })
+	@org.testng.annotations.Parameters({ "platformName", "udid", "deviceName", "avd" , "emulator", "unlockType", "unlockKey"})
 	@BeforeTest
-	public void beforeTest(String platformName, String udid, String deviceName, String avd) throws Exception {
+	public void beforeTest(String platformName, String udid, String deviceName, String avd, String emulator, String unlockType, String unlockKey) throws Exception {
 		URL url;
 		platform = platformName;
 		
@@ -67,20 +67,30 @@ public class BaseTest {
 			inputStrings = getClass().getClassLoader().getResourceAsStream(xmlFileName);
 			utils = new TestUtils();
 			strings = utils.parseStringXML(inputStrings);
+			
 
 			DesiredCapabilities desiredCapability = new DesiredCapabilities();
 			desiredCapability.setCapability("platforName", platformName);
 			desiredCapability.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
-			desiredCapability.setCapability(MobileCapabilityType.UDID, udid);
+			
 
 			switch (platformName) {
 			case "Android":
 
 				desiredCapability.setCapability(MobileCapabilityType.AUTOMATION_NAME,
 						props.getProperty("androidAutomationName"));
+				
 				// Para iniciar el emulador automaticamente
-				desiredCapability.setCapability("avd", avd);
-				desiredCapability.setCapability("avdLauchTimeout", 118000);
+				if (emulator.equalsIgnoreCase("true")) {
+					desiredCapability.setCapability("avd", avd);
+					desiredCapability.setCapability("avdLauchTimeout", 118000);
+				}
+				else { 
+					desiredCapability.setCapability("unlockType", unlockType);
+					desiredCapability.setCapability("unlockKey", unlockKey);
+					desiredCapability.setCapability(MobileCapabilityType.UDID, udid);
+					
+				}
 
 				// Para instalar la App
 				// Para generar la url de la app
