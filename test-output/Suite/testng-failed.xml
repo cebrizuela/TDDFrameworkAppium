@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="com.qa.listeners.TestListener"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Pixel_2(failed)">
+  <test thread-count="5" parallel="tests" name="Test_clara(failed)">
     <parameter name="emulator" value="true"/>
     <parameter name="chromeDriverPort" value="11000"/>
     <parameter name="platformName" value="Android"/>
@@ -27,5 +27,5 @@
         </methods>
       </class> <!-- com.qa.tests.LoginTests -->
     </classes>
-  </test> <!-- Pixel_2(failed) -->
+  </test> <!-- Test_clara(failed) -->
 </suite> <!-- Failed suite [Suite] -->

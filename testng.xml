@@ -3,13 +3,31 @@
 	<listeners>
 <listener class-name="com.qa.listeners.TestListener"/>
 </listeners>
-	<test name="Pixel_2">
+<!-- 
+	<test name="Test_ledier">
 
 		<parameter name="emulator" value="true" />
 		<parameter name="platformName" value="Android" />
 		<parameter name="udid" value="emulator-5554" />
 		<parameter name="deviceName" value="pixel_3" />
 		<parameter name="avd" value="Pixel5_Android11" />
+		<parameter name="systemPort" value="10000" />
+		<parameter name="chromeDriverPort" value="11000" />
+		<classes>
+			<class name="com.qa.tests.LoginTests">
+			
+			</class>
+		</classes>
+	</test>
+	-->
+	
+		<test name="Test_clara">
+
+		<parameter name="emulator" value="true" />
+		<parameter name="platformName" value="Android" />
+		<parameter name="udid" value="emulator-5554" />
+		<parameter name="deviceName" value="pixel_3" />
+		<parameter name="avd" value="AndroidCurso" />
 		<parameter name="systemPort" value="10000" />
 		<parameter name="chromeDriverPort" value="11000" />
 		<classes>
