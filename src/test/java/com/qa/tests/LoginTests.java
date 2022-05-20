@@ -65,6 +65,7 @@ public class LoginTests extends BaseTest{
 		
 		/// La clase Method se utiliza para obtener el nombre del metodo
 		System.out.println("\n" + "****** starting test: " + m.getName() + "*****" + "\n");
+		
 		loginPage = new LoginPage();
 		
 	}

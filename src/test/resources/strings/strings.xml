@@ -12,4 +12,8 @@
     <string name="product_details_page_slb_title">Sauce Labs Backpack</string>
     <string name="product_details_page_slb_txt">carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.</string>
 	<string name="product_details_page_slb_price">$29.99</string>
+	
+<!-- Product Details Page SLB product details -->  
+<string name="login_app">Username</string>
+	
 </resources>
