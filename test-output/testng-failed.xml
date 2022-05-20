@@ -13,6 +13,17 @@
     <parameter name="avd" value="AndroidCurso"/>
     <parameter name="systemPort" value="10000"/>
     <classes>
+      <class name="com.qa.tests.LogoutTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="successfulLogout"/>
+        </methods>
+      </class> <!-- com.qa.tests.LogoutTest -->
       <class name="com.qa.tests.LoginTests">
         <methods>
           <include name="beforeMethod"/>

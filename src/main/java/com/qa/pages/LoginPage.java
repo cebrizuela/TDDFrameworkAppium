@@ -45,4 +45,9 @@ public class LoginPage extends BaseTest{
 	public String getErrTxt() {
 		 return getText(errTxt);
 	}
+	
+	public String getUserName() {
+		
+		return getText(usernameTxtFld);
+	}
 }

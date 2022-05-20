@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="tests">
 
-<!-- 
+	<!-- 
 	<test name="Test_ledier">
 		<listeners>
 <listener class-name="com.qa.listeners.TestListener"/>
@@ -23,10 +23,10 @@
 	-->
 
 
-		<test name="Test_clara">
-			<listeners>
-<listener class-name="com.qa.listeners.TestListener"/>
-</listeners>
+	<test name="Test_clara">
+		<listeners>
+			<listener class-name="com.qa.listeners.TestListener" />
+		</listeners>
 
 		<parameter name="emulator" value="true" />
 		<parameter name="platformName" value="Android" />
@@ -35,14 +35,17 @@
 		<parameter name="avd" value="AndroidCurso" />
 		<parameter name="systemPort" value="10000" />
 		<parameter name="chromeDriverPort" value="11000" />
+		<parameter name="unlockType" value="" />
+		<parameter name="unlockKey" value="" />
 		<classes>
-			<class name="com.qa.tests.LoginTests">
-			
-			</class>
+			<class name="com.qa.tests.LoginTests"></class>
+
+			<class name="com.qa.tests.LogoutTest"></class>
 		</classes>
 	</test>
- 
-	
+
+
+	<!-- 
 			<test name="Test_clara_real">
 			<listeners>
 <listener class-name="com.qa.listeners.TestListener"/>
@@ -63,5 +66,6 @@
 			</class>
 		</classes>
 	</test>
+	-->
 
 </suite> <!-- Suite -->
