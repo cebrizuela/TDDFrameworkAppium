@@ -13,6 +13,7 @@ public class MenuPage extends BaseTest{
 	private MobileElement settingsBtn;
 	
 	public SettingsPage pressSettingsBtn() {
+		System.out.println("Press the Settings button");
 		click(settingsBtn);
 		return new SettingsPage();
 	}

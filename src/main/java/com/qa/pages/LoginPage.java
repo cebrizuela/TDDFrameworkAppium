@@ -26,6 +26,7 @@ public class LoginPage extends BaseTest{
 	
 	public LoginPage enterUserName(String username) {
 		clear(usernameTxtFld);
+		System.out.println("Login with " + username);
 		sendKeys(usernameTxtFld, username);
 		return this;
 	}
@@ -33,21 +34,32 @@ public class LoginPage extends BaseTest{
 	
 	public LoginPage enterPassword(String password) {
 		clear(passwordTxtFld);
+		System.out.println("Password is " + password);
 		sendKeys(passwordTxtFld, password);
 		return this;
 	}
 	
 	public ProductsPage pressLoginButton() {
+		System.out.println("Press login button");
 		click(loginBtn);
 		return new ProductsPage();
 	}
 
 	public String getErrTxt() {
-		 return getText(errTxt);
+		String err = getText(errTxt);
+		System.out.println("Error text is " + err);
+		return err;
 	}
 	
 	public String getUserName() {
-		
-		return getText(usernameTxtFld);
+		String userNameField = getText(usernameTxtFld);
+		System.out.println("Username field text " + userNameField);
+		return userNameField;
+	}
+	
+	public ProductsPage login(String username, String password) {
+		enterUserName(username);
+		enterPassword(password);
+		return pressLoginButton();
 	}
 }

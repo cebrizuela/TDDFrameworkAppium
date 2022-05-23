@@ -10,6 +10,7 @@ public class SettingsPage extends BaseTest {
 	@AndroidFindBy (accessibility = "test-LOGOUT") private MobileElement logoutBtn;
 	
 	public LoginPage pressLogoutBtn() {
+		System.out.println("Press the button Logout ");
 		click(logoutBtn);
 		return new LoginPage();
 	}
