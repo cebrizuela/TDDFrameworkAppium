@@ -7,6 +7,7 @@ import com.beust.jcommander.Parameters;
 import com.qa.utils.TestUtils;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.functions.ExpectedCondition;
@@ -188,7 +189,17 @@ public class BaseTest {
 		}
 		return null;
 	}
+	
+	// codigo para cerrar la app
+	public void closeApp() {
+		((InteractsWithApps) driver).closeApp();	
+	}
 
+	// codigo para abrir la app
+	public void launchApp() {
+		((InteractsWithApps) driver).launchApp();	
+	}
+	
 	@AfterTest
 	public void afterTest() {
 		driver.quit();
