@@ -17,12 +17,12 @@
     <classes>
       <class name="com.qa.tests.ProductTest">
         <methods>
-          <include name="validateProductOnProductPage"/>
           <include name="afterTest"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="beforeTest"/>
           <include name="beforeMethod"/>
+          <include name="validateProductOnProductDetails"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.qa.tests.ProductTest -->

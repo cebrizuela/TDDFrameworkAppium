@@ -23,6 +23,8 @@ public class ProductDetailsPage extends BaseTest {
 	private MobileElement backToProductsBtn;
 	
 	
+	
+	
 	public String getProductTitleText() {
 		String productTitleText = getText(productTitle);
 		System.out.println("The product title is " + productTitleText);
@@ -39,6 +41,16 @@ public class ProductDetailsPage extends BaseTest {
 		String productPriceText = getText(productPrice);
 		System.out.println("The product price is " + productPriceText);
 		return productPriceText;
+	}
+	
+	public ProductDetailsPage scrollToPrice () {
+		
+		//scrollToElement(productPriceDescripcion);
+		int positionPrice =1600;
+		scrollByPosition(positionPrice);
+		System.out.println("description del campo price " + getAttribute(productPrice, "content-desc" ));
+		
+		return this;
 	}
 
 	public Boolean isButtonAddCartIsDisplayed(){ 

@@ -7,19 +7,26 @@ import com.beust.jcommander.Parameters;
 import com.qa.utils.TestUtils;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.FindsByAndroidUIAutomator;
 import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.functions.ExpectedCondition;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.ElementOption;
+import io.appium.java_client.touch.offset.PointOption;
 
 import org.testng.annotations.BeforeTest;
 
+import java.awt.Dimension;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.Properties;
 
@@ -28,6 +35,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+
 
 // En esta clase se inicializara el driver 
 public class BaseTest {
@@ -41,7 +49,8 @@ public class BaseTest {
 	TestUtils utils;
 	
 	protected static String platform;
-
+	
+	
 	public BaseTest() {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
@@ -199,6 +208,26 @@ public class BaseTest {
 	public void launchApp() {
 		((InteractsWithApps) driver).launchApp();	
 	}
+	
+	  public MobileElement scrollToElement() {	  
+			return (MobileElement) ((FindsByAndroidUIAutomator) driver).findElementByAndroidUIAutomator(
+					"new UiScrollable(new UiSelector()" + ".scrollable(true)).scrollIntoView("
+							+ "new UiSelector().description(\"test-Price\"));");
+			
+	  }
+	  
+	  public void scrollByPosition (int startY) {
+		 TouchAction t = new TouchAction(driver);
+		 org.openqa.selenium.Dimension size = driver.manage().window().getSize();
+		 int positionX = size.width /2;
+		 int endY = (int) (size.height * 0.2);
+		 
+		 System.out.println("Size " + size + " Y " + size.height + " X " + size.width);
+		 t.press(PointOption.point(positionX,startY))
+         .waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000)))
+         .moveTo(PointOption.point(positionX,endY)).release().perform();
+		  
+	  }
 	
 	@AfterTest
 	public void afterTest() {

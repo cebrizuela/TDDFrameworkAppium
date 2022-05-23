@@ -38,9 +38,9 @@
 		<parameter name="unlockType" value="" />
 		<parameter name="unlockKey" value="" />
 		<classes>
-			<class name="com.qa.tests.LoginTests"></class>
+		<!-- 	<class name="com.qa.tests.LoginTests"></class>
 
-			<class name="com.qa.tests.LogoutTest"></class>
+			<class name="com.qa.tests.LogoutTest"></class> -->
 			<class name="com.qa.tests.ProductTest"></class>
 		</classes>
 	</test>
