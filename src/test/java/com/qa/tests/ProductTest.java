@@ -130,17 +130,20 @@ public class ProductTest extends BaseTest {
 				+ "expected product details txt - " + expectedProductDescription);
 		sa.assertEquals(actualProductDescription, expectedProductDescription);
 
-		/*
-		 * String actualProductPrice = productDetailsPage.getProductPriceText(); String
-		 * expectedProductPrice = strings.get("product_details_page_slb_price");
-		 * System.out.println("actual product price txt - " + actualProductPrice + "\n"
-		 * + "expected product price txt - " + expectedProductPrice);
-		 * sa.assertEquals(actualProductPrice, expectedProductPrice);
-		 * 
-		 * System.out.println("Is displayed the ADD Cart button " +
-		 * productDetailsPage.isButtonAddCartIsDisplayed());
-		 * sa.assertTrue(productDetailsPage.isButtonAddCartIsDisplayed());
-		 */
+		
+		//Se debe hacer scroll porque no se muestra ese campo en la pantalla
+		productDetailsPage.scrollToPrice();
+		
+		  String actualProductPrice = productDetailsPage.getProductPriceText(); String
+		  expectedProductPrice = strings.get("product_details_page_slb_price");
+		  System.out.println("actual product price txt - " + actualProductPrice + "\n"
+		  + "expected product price txt - " + expectedProductPrice);
+		  sa.assertEquals(actualProductPrice, expectedProductPrice);
+		  
+		  System.out.println("Is displayed the ADD Cart button " +
+		  productDetailsPage.isButtonAddCartIsDisplayed());
+		  sa.assertTrue(productDetailsPage.isButtonAddCartIsDisplayed());
+		 
 
 		productsPage = productDetailsPage.pressBackToProductsBtn();
 
