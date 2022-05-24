@@ -93,7 +93,7 @@ public class ProductTest extends BaseTest {
 
 	
 
-		String actualProductTitle = productsPage.getProductTitleText();
+		String actualProductTitle = productsPage.getProductTitleText() + "Test falla";
 		String expectedProductTitle = strings.get("products_page_slb_title");
 		System.out.println("actual product title txt - " + actualProductTitle + "\n" + "expected product title txt - "
 				+ expectedProductTitle);

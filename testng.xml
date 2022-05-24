@@ -9,6 +9,7 @@
 
 		<parameter name="emulator" value="true" />
 		<parameter name="platformName" value="Android" />
+		<parameter name="platformVersion" value="11" />
 		<parameter name="udid" value="emulator-5554" />
 		<parameter name="deviceName" value="pixel_3" />
 		<parameter name="avd" value="Pixel5_Android11" />

@@ -50,6 +50,8 @@ public class BaseTest {
 	
 	protected static String platform;
 	
+	protected static String dateTime;
+	
 	
 	public BaseTest() {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
@@ -58,8 +60,12 @@ public class BaseTest {
 	@org.testng.annotations.Parameters({ "platformName", "udid", "deviceName", "avd" , "emulator", "unlockType", "unlockKey"})
 	@BeforeTest
 	public void beforeTest(String platformName, String udid, String deviceName, String avd, String emulator, String unlockType, String unlockKey) throws Exception {
+		
+		utils = new TestUtils();
+		dateTime = utils.dateTime();
 		URL url;
 		platform = platformName;
+		
 		
 		try {
 
@@ -75,7 +81,7 @@ public class BaseTest {
 			// Codigo para acceder al xml
 			String xmlFileName = "strings/strings.xml";
 			inputStrings = getClass().getClassLoader().getResourceAsStream(xmlFileName);
-			utils = new TestUtils();
+			
 			strings = utils.parseStringXML(inputStrings);
 			
 
@@ -163,7 +169,19 @@ public class BaseTest {
 	}
 	
 	
+	
 /// Los metodos usados en todas las paginas
+	
+	public AppiumDriver getDriver() {
+		return driver;		
+	}
+	
+	//En esta variable se almacena la fecha y hora que iinicia el test
+	public String getDataTime() {
+		return dateTime;
+		
+	}
+	
 	public void waitForVisibility(MobileElement e) {
 		WebDriverWait wait = new WebDriverWait(driver, TestUtils.WAIT);
 		wait.until(ExpectedConditions.visibilityOf(e));
@@ -199,16 +217,17 @@ public class BaseTest {
 		return null;
 	}
 	
-	// codigo para cerrar la app
+	// metodo para cerrar la app
 	public void closeApp() {
 		((InteractsWithApps) driver).closeApp();	
 	}
 
-	// codigo para abrir la app
+	// metodo para abrir la app
 	public void launchApp() {
 		((InteractsWithApps) driver).launchApp();	
 	}
 	
+	//metodo para hacer scroll bucando por elemento-- codigo del profesor
 	  public MobileElement scrollToElement() {	  
 			return (MobileElement) ((FindsByAndroidUIAutomator) driver).findElementByAndroidUIAutomator(
 					"new UiScrollable(new UiSelector()" + ".scrollable(true)).scrollIntoView("
@@ -216,6 +235,7 @@ public class BaseTest {
 			
 	  }
 	  
+	  //Metodo para hacer scroll por posicion
 	  public void scrollByPosition (int startY) {
 		 TouchAction t = new TouchAction(driver);
 		 org.openqa.selenium.Dimension size = driver.manage().window().getSize();
