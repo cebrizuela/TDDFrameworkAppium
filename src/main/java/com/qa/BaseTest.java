@@ -16,6 +16,7 @@ import io.appium.java_client.functions.ExpectedCondition;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.screenrecording.CanRecordScreen;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
@@ -24,18 +25,25 @@ import org.testng.annotations.BeforeTest;
 
 import java.awt.Dimension;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.time.Duration;
+import java.util.Base64;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
+
+import javax.naming.spi.DirStateFactory.Result;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
-
 
 // En esta clase se inicializara el driver 
 public class BaseTest {
@@ -47,26 +55,68 @@ public class BaseTest {
 	protected static HashMap<String, String> strings = new HashMap<String, String>();
 	InputStream inputStrings;
 	TestUtils utils;
-	
+
 	protected static String platform;
-	
+
 	protected static String dateTime;
-	
-	
+
 	public BaseTest() {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-	@org.testng.annotations.Parameters({ "platformName", "udid", "deviceName", "avd" , "emulator", "unlockType", "unlockKey"})
+	@BeforeMethod
+	public void beforeMethod() {
+		System.out.println("super before method ");
+		((CanRecordScreen) driver).startRecordingScreen();
+
+	}
+
+	// Metodo para terminar la grabacion y guardarla
+	@AfterMethod
+	public void afterMethod(ITestResult result) {
+		String media = ((CanRecordScreen) getDriver()).stopRecordingScreen();
+
+		Map<String, String> params = result.getTestContext().getCurrentXmlTest().getAllParameters();
+
+		String dirPath = "videos" + File.separator + params.get("platformName") + "_" + params.get("deviceName")
+				+ File.separator + dateTime + File.separator + result.getTestClass().getRealClass().getSimpleName();
+
+		File videoDir = new File(dirPath);
+
+		synchronized (videoDir) {
+			if (!videoDir.exists()) {
+				videoDir.mkdirs();
+			}
+		}
+
+		FileOutputStream stream = null;
+
+		 
+			try {
+				stream = new FileOutputStream(videoDir + File.separator + result.getName() + ".mp4");
+				stream.write(Base64.getDecoder().decode(media));
+
+				stream.write(null);
+				stream.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+	
+
+	@org.testng.annotations.Parameters({ "platformName", "udid", "deviceName", "avd", "emulator", "unlockType",
+			"unlockKey" })
 	@BeforeTest
-	public void beforeTest(String platformName, String udid, String deviceName, String avd, String emulator, String unlockType, String unlockKey) throws Exception {
-		
+	public void beforeTest(String platformName, String udid, String deviceName, String avd, String emulator,
+			String unlockType, String unlockKey) throws Exception {
+
 		utils = new TestUtils();
 		dateTime = utils.dateTime();
 		URL url;
 		platform = platformName;
-		
-		
+
 		try {
 
 			// Codigo para acceder a file de configuracion
@@ -81,31 +131,28 @@ public class BaseTest {
 			// Codigo para acceder al xml
 			String xmlFileName = "strings/strings.xml";
 			inputStrings = getClass().getClassLoader().getResourceAsStream(xmlFileName);
-			
+
 			strings = utils.parseStringXML(inputStrings);
-			
 
 			DesiredCapabilities desiredCapability = new DesiredCapabilities();
 			desiredCapability.setCapability("platforName", platformName);
 			desiredCapability.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
-			
 
 			switch (platformName) {
 			case "Android":
 
 				desiredCapability.setCapability(MobileCapabilityType.AUTOMATION_NAME,
 						props.getProperty("androidAutomationName"));
-				
+
 				// Para iniciar el emulador automaticamente
 				if (emulator.equalsIgnoreCase("true")) {
 					desiredCapability.setCapability("avd", avd);
 					desiredCapability.setCapability("avdLauchTimeout", 118000);
-				}
-				else { 
+				} else {
 					desiredCapability.setCapability("unlockType", unlockType);
 					desiredCapability.setCapability("unlockKey", unlockKey);
 					desiredCapability.setCapability(MobileCapabilityType.UDID, udid);
-					
+
 				}
 
 				// Para instalar la App
@@ -146,7 +193,7 @@ public class BaseTest {
 				 * driver = new IOSDriver(url, desiredCapabilities);
 				 */
 				break;
-				
+
 			default:
 				throw new Exception("Invalid platform! - " + platformName);
 			}
@@ -167,21 +214,19 @@ public class BaseTest {
 			}
 		}
 	}
-	
-	
-	
+
 /// Los metodos usados en todas las paginas
-	
+
 	public AppiumDriver getDriver() {
-		return driver;		
+		return driver;
 	}
-	
-	//En esta variable se almacena la fecha y hora que iinicia el test
+
+	// En esta variable se almacena la fecha y hora que iinicia el test
 	public String getDataTime() {
 		return dateTime;
-		
+
 	}
-	
+
 	public void waitForVisibility(MobileElement e) {
 		WebDriverWait wait = new WebDriverWait(driver, TestUtils.WAIT);
 		wait.until(ExpectedConditions.visibilityOf(e));
@@ -191,7 +236,7 @@ public class BaseTest {
 		waitForVisibility(e);
 		e.clear();
 	}
-	
+
 	public void click(MobileElement e) {
 		waitForVisibility(e);
 		e.click();
@@ -206,49 +251,48 @@ public class BaseTest {
 		waitForVisibility(e);
 		return e.getAttribute(attribute);
 	}
-	
+
 	public String getText(MobileElement e) {
-		switch(platform) {
+		switch (platform) {
 		case "Android":
-			return getAttribute(e,"text");
+			return getAttribute(e, "text");
 		case "iOS":
-			return getAttribute(e,"label");
+			return getAttribute(e, "label");
 		}
 		return null;
 	}
-	
+
 	// metodo para cerrar la app
 	public void closeApp() {
-		((InteractsWithApps) driver).closeApp();	
+		((InteractsWithApps) driver).closeApp();
 	}
 
 	// metodo para abrir la app
 	public void launchApp() {
-		((InteractsWithApps) driver).launchApp();	
+		((InteractsWithApps) driver).launchApp();
 	}
-	
-	//metodo para hacer scroll bucando por elemento-- codigo del profesor
-	  public MobileElement scrollToElement() {	  
-			return (MobileElement) ((FindsByAndroidUIAutomator) driver).findElementByAndroidUIAutomator(
-					"new UiScrollable(new UiSelector()" + ".scrollable(true)).scrollIntoView("
-							+ "new UiSelector().description(\"test-Price\"));");
-			
-	  }
-	  
-	  //Metodo para hacer scroll por posicion
-	  public void scrollByPosition (int startY) {
-		 TouchAction t = new TouchAction(driver);
-		 org.openqa.selenium.Dimension size = driver.manage().window().getSize();
-		 int positionX = size.width /2;
-		 int endY = (int) (size.height * 0.2);
-		 
-		 System.out.println("Size " + size + " Y " + size.height + " X " + size.width);
-		 t.press(PointOption.point(positionX,startY))
-         .waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000)))
-         .moveTo(PointOption.point(positionX,endY)).release().perform();
-		  
-	  }
-	
+
+	// metodo para hacer scroll bucando por elemento-- codigo del profesor
+	public MobileElement scrollToElement() {
+		return (MobileElement) ((FindsByAndroidUIAutomator) driver)
+				.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()"
+						+ ".scrollable(true)).scrollIntoView(" + "new UiSelector().description(\"test-Price\"));");
+
+	}
+
+	// Metodo para hacer scroll por posicion
+	public void scrollByPosition(int startY) {
+		TouchAction t = new TouchAction(driver);
+		org.openqa.selenium.Dimension size = driver.manage().window().getSize();
+		int positionX = size.width / 2;
+		int endY = (int) (size.height * 0.2);
+
+		System.out.println("Size " + size + " Y " + size.height + " X " + size.width);
+		t.press(PointOption.point(positionX, startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(2000)))
+				.moveTo(PointOption.point(positionX, endY)).release().perform();
+
+	}
+
 	@AfterTest
 	public void afterTest() {
 		driver.quit();
