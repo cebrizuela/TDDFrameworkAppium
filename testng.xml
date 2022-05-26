@@ -36,12 +36,12 @@
 		<parameter name="avd" value="AndroidCurso" />
 		<parameter name="systemPort" value="10000" />
 		<parameter name="chromeDriverPort" value="11000" />
-		<parameter name="unlockType" value="" />
-		<parameter name="unlockKey" value="" />
+		<parameter name="unlockType" value=" " />
+		<parameter name="unlockKey" value=" " />
 		<classes>
-		<!-- 	<class name="com.qa.tests.LoginTests"></class>
+		 	<class name="com.qa.tests.LoginTests"></class>
 
-			<class name="com.qa.tests.LogoutTest"></class> -->
+			<class name="com.qa.tests.LogoutTest"></class> 
 			<class name="com.qa.tests.ProductTest"></class>
 		</classes>
 	</test>

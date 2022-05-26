@@ -6,11 +6,11 @@
   </listeners>
   <test thread-count="5" parallel="tests" name="Test_clara(failed)">
     <parameter name="emulator" value="true"/>
-    <parameter name="unlockType" value=""/>
+    <parameter name="unlockType" value=" "/>
     <parameter name="chromeDriverPort" value="11000"/>
     <parameter name="platformName" value="Android"/>
     <parameter name="udid" value="emulator-5554"/>
-    <parameter name="unlockKey" value=""/>
+    <parameter name="unlockKey" value=" "/>
     <parameter name="deviceName" value="pixel_3"/>
     <parameter name="avd" value="AndroidCurso"/>
     <parameter name="systemPort" value="10000"/>
@@ -22,6 +22,8 @@
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="beforeClass"/>
         </methods>
