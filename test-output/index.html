@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,46 +93,55 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,  6 skipped,  </span>
+                    <span class="method-stats">6 methods, 2 failed,   4 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidPassword">invalidPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidUserName">invalidUserName</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="successfulLogin">successfulLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LogoutTest" class="method navigator-link" hash-for-method="successfulLogout">successfulLogout</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.tests.ProductTest" class="method navigator-link" hash-for-method="validateProductOnProductDetails">validateProductOnProductDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.qa.tests.ProductTest" class="method navigator-link" hash-for-method="validateProductOnProductPage">validateProductOnProductPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidPassword">invalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="invalidUserName">invalidUserName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LoginTests" class="method navigator-link" hash-for-method="successfulLogin">successfulLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.qa.tests.LogoutTest" class="method navigator-link" hash-for-method="successfulLogout">successfulLogout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -144,92 +153,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-skipped">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.qa.tests.LogoutTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="successfulLogout">
-                  </a> <!-- successfulLogout -->
-                  <span class="method-name">successfulLogout</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;io.appium.java_client.screenrecording.CanRecordScreen.startRecordingScreen()&quot; because &quot;com.qa.BaseTest.driver&quot; is null
-	at com.qa.BaseTest.beforeMethod(BaseTest.java:70)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 20 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.qa.tests.LoginTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidPassword">
-                  </a> <!-- invalidPassword -->
-                  <span class="method-name">invalidPassword</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;io.appium.java_client.InteractsWithApps.closeApp()&quot; because &quot;com.qa.BaseTest.driver&quot; is null
-	at com.qa.BaseTest.closeApp(BaseTest.java:267)
-	at com.qa.tests.LoginTests.beforeClass(LoginTests.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 14 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalidUserName">
-                  </a> <!-- invalidUserName -->
-                  <span class="method-name">invalidUserName</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;io.appium.java_client.InteractsWithApps.closeApp()&quot; because &quot;com.qa.BaseTest.driver&quot; is null
-	at com.qa.BaseTest.closeApp(BaseTest.java:267)
-	at com.qa.tests.LoginTests.beforeClass(LoginTests.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 14 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="successfulLogin">
-                  </a> <!-- successfulLogin -->
-                  <span class="method-name">successfulLogin</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;io.appium.java_client.InteractsWithApps.closeApp()&quot; because &quot;com.qa.BaseTest.driver&quot; is null
-	at com.qa.BaseTest.closeApp(BaseTest.java:267)
-	at com.qa.tests.LoginTests.beforeClass(LoginTests.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 14 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.qa.tests.ProductTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -238,15 +164,56 @@
                   <a name="validateProductOnProductDetails">
                   </a> <!-- validateProductOnProductDetails -->
                   <span class="method-name">validateProductOnProductDetails</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;io.appium.java_client.InteractsWithApps.closeApp()&quot; because &quot;com.qa.BaseTest.driver&quot; is null
-	at com.qa.BaseTest.closeApp(BaseTest.java:267)
-	at com.qa.tests.ProductTest.beforeClass(ProductTest.java:61)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Located by By.chained({By.xpath: //android.view.ViewGroup[@content-desc=&quot;test-Description&quot;]/android.widget.TextView[2]}) (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.BaseTest.waitForVisibility(BaseTest.java:232)
+	at com.qa.BaseTest.getAttribute(BaseTest.java:251)
+	at com.qa.BaseTest.getText(BaseTest.java:258)
+	at com.qa.pages.ProductDetailsPage.getProductDescriptionText(ProductDetailsPage.java:35)
+	at com.qa.tests.ProductTest.validateProductOnProductDetails(ProductTest.java:127)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 14 stack frames
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.openqa.selenium.NoSuchElementException: Can&apos;t locate an element by this strategy: By.chained({By.xpath: //android.view.ViewGroup[@content-desc=&quot;test-Description&quot;]/android.widget.TextView[2]})
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:126)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
+	at io.appium.java_client.android.AndroidElement$$EnhancerByCGLIB$$b598166c.isDisplayed(&lt;generated&gt;)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@5c585bec (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:304)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:99)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:119)
+	... 35 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.view.ViewGroup[@content-desc=&quot;test-Description&quot;]/android.widget.TextView[2]})
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAT00145.local&apos;, ip: &apos;2800:a4:2925:7f00:bc68:add3:b7be:3a22%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;11.0.15&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:74)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$0(AppiumElementLocator.java:120)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:172)
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 37 more
+... Removed 18 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -255,24 +222,68 @@
                   <a name="validateProductOnProductPage">
                   </a> <!-- validateProductOnProductPage -->
                   <span class="method-name">validateProductOnProductPage</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;io.appium.java_client.InteractsWithApps.closeApp()&quot; because &quot;com.qa.BaseTest.driver&quot; is null
-	at com.qa.BaseTest.closeApp(BaseTest.java:267)
-	at com.qa.tests.ProductTest.beforeClass(ProductTest.java:61)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	expected [Sauce Labs Backpack] but found [Sauce Labs BackpackTest falla]
+	at com.qa.tests.ProductTest.validateProductOnProductPage(ProductTest.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 14 stack frames
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+... Removed 20 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.tests.LogoutTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="successfulLogout">
+                  </a> <!-- successfulLogout -->
+                  <span class="method-name">successfulLogout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.tests.LoginTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidPassword">
+                  </a> <!-- invalidPassword -->
+                  <span class="method-name">invalidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="invalidUserName">
+                  </a> <!-- invalidUserName -->
+                  <span class="method-name">invalidUserName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="successfulLogin">
+                  </a> <!-- successfulLogin -->
+                  <span class="method-name">successfulLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/ledier.hernandez/Library/CloudStorage/OneDrive-Perficient,Inc/Repositorios/TDDFrameworkAppium/testng.xml</span>
+            <span class="header-content">/Users/clara.brizuela/Library/CloudStorage/OneDrive-Perficient,Inc/Repositorio/TDDFrameworkAppium/testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -289,8 +300,8 @@
     &lt;parameter name=&quot;platformName&quot; value=&quot;Android&quot;/&gt;
     &lt;parameter name=&quot;udid&quot; value=&quot;emulator-5554&quot;/&gt;
     &lt;parameter name=&quot;unlockKey&quot; value=&quot; &quot;/&gt;
-    &lt;parameter name=&quot;deviceName&quot; value=&quot;pixel_3&quot;/&gt;
-    &lt;parameter name=&quot;avd&quot; value=&quot;AndroidCurso&quot;/&gt;
+    &lt;parameter name=&quot;deviceName&quot; value=&quot;pixel_2&quot;/&gt;
+    &lt;parameter name=&quot;avd&quot; value=&quot;Pixel5_Android11&quot;/&gt;
     &lt;parameter name=&quot;systemPort&quot; value=&quot;10000&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.tests.LoginTests&quot;/&gt;
@@ -337,34 +348,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'successfulLogin')
-data.setCell(0, 2, 'com.qa.tests.LoginTests')
-data.setCell(0, 3, 0);
+data.setCell(0, 1, 'validateProductOnProductDetails')
+data.setCell(0, 2, 'com.qa.tests.ProductTest')
+data.setCell(0, 3, 12907);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'invalidPassword')
+data.setCell(1, 1, 'successfulLogin')
 data.setCell(1, 2, 'com.qa.tests.LoginTests')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 4675);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'successfulLogout')
-data.setCell(2, 2, 'com.qa.tests.LogoutTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 1, 'invalidPassword')
+data.setCell(2, 2, 'com.qa.tests.LoginTests')
+data.setCell(2, 3, 4640);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'validateProductOnProductPage')
-data.setCell(3, 2, 'com.qa.tests.ProductTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'successfulLogout')
+data.setCell(3, 2, 'com.qa.tests.LogoutTest')
+data.setCell(3, 3, 3503);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'invalidUserName')
 data.setCell(4, 2, 'com.qa.tests.LoginTests')
-data.setCell(4, 3, 0);
+data.setCell(4, 3, 3264);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'validateProductOnProductDetails')
+data.setCell(5, 1, 'validateProductOnProductPage')
 data.setCell(5, 2, 'com.qa.tests.ProductTest')
-data.setCell(5, 3, 0);
+data.setCell(5, 3, 1234);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 478 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -375,6 +386,20 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateProductOnProductPage</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">This is the sample screeshot</span>
+                <span class="reporter-method-output"><a href='/Users/clara.brizuela/Library/CloudStorage/OneDrive-Perficient,Inc/Repositorio/TDDFrameworkAppium/Screenshots/Android_pixel_2_/2022-06-06-23-51-27/ProductTest/validateProductOnProductPage.png'> <img src='/Users/clara.brizuela/Library/CloudStorage/OneDrive-Perficient,Inc/Repositorio/TDDFrameworkAppium/Screenshots/Android_pixel_2_/2022-06-06-23-51-27/ProductTest/validateProductOnProductPage.png' height='400' width='400'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateProductOnProductDetails</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">This is the sample screeshot</span>
+                <span class="reporter-method-output"><a href='/Users/clara.brizuela/Library/CloudStorage/OneDrive-Perficient,Inc/Repositorio/TDDFrameworkAppium/Screenshots/Android_pixel_2_/2022-06-06-23-51-27/ProductTest/validateProductOnProductDetails.png'> <img src='/Users/clara.brizuela/Library/CloudStorage/OneDrive-Perficient,Inc/Repositorio/TDDFrameworkAppium/Screenshots/Android_pixel_2_/2022-06-06-23-51-27/ProductTest/validateProductOnProductDetails.png' height='400' width='400'/> </a></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -383,7 +408,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.qa.tests.LogoutTest</span>
+              <span class="ignored-class-name">com.qa.tests.ProductTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">afterTest</span>
                 <br/>
@@ -392,7 +417,7 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.qa.tests.ProductTest</span>
+              <span class="ignored-class-name">com.qa.tests.LogoutTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">afterTest</span>
                 <br/>
@@ -410,177 +435,175 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(Android, emulator-5554, pixel_3, AndroidCurso, true,  ,  )</span>
+                <span class="method-name">beforeTest(Android, emulator-5554, pixel_2, Pixel5_Android11, true,  ,  )</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">405 ms</span>
+                <span class="method-start">5429 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">421 ms</span>
+                <span class="method-start">6760 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">422 ms</span>
+                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidPassword())</span>
+                <span class="method-start">7247 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidPassword</span>
-                <span class="method-start">423 ms</span>
+                <span class="method-start">7370 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">426 ms</span>
+                <span class="method-start">12012 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">427 ms</span>
+                <span class="method-name">afterMethod([TestResult name=invalidPassword status=SUCCESS method=LoginTests.invalidPassword()[pri:0, instance:...)</span>
+                <span class="method-start">12012 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">429 ms</span>
+                <span class="method-start">12809 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">430 ms</span>
+                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.invalidUserName())</span>
+                <span class="method-start">13282 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">invalidUserName</span>
-                <span class="method-start">431 ms</span>
+                <span class="method-start">13283 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">432 ms</span>
+                <span class="method-name">afterMethod([TestResult name=invalidUserName status=SUCCESS method=LoginTests.invalidUserName()[pri:0, instance:...)</span>
+                <span class="method-start">16548 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">433 ms</span>
+                <span class="method-start">16548 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">435 ms</span>
+                <span class="method-start">17385 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">435 ms</span>
+                <span class="method-name">beforeMethod(public void com.qa.tests.LoginTests.successfulLogin())</span>
+                <span class="method-start">17853 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">successfulLogin</span>
-                <span class="method-start">436 ms</span>
+                <span class="method-start">17854 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">438 ms</span>
+                <span class="method-start">22529 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">439 ms</span>
+                <span class="method-name">afterMethod([TestResult name=successfulLogin status=SUCCESS method=LoginTests.successfulLogin()[pri:0, instance:...)</span>
+                <span class="method-start">22530 ms</span>
               </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tests.LogoutTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">23373 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">440 ms</span>
+                <span class="method-start">23373 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tests.LogoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">441 ms</span>
+                <span class="method-start">23373 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">442 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">444 ms</span>
+                <span class="method-name">beforeMethod(public void com.qa.tests.LogoutTest.successfulLogout())</span>
+                <span class="method-start">23851 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">successfulLogout</span>
-                <span class="method-start">445 ms</span>
+                <span class="method-start">23851 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">447 ms</span>
+                <span class="method-name">afterMethod([TestResult name=successfulLogout status=SUCCESS method=LogoutTest.successfulLogout()[pri:0, instanc...)</span>
+                <span class="method-start">27355 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">448 ms</span>
+                <span class="method-start">27355 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.tests.ProductTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">449 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.tests.LogoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">449 ms</span>
+                <span class="method-start">28305 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tests.ProductTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">28306 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">452 ms</span>
+                <span class="method-start">31130 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">453 ms</span>
+                <span class="method-name">beforeMethod(public void com.qa.tests.ProductTest.validateProductOnProductDetails())</span>
+                <span class="method-start">31662 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">validateProductOnProductDetails</span>
-                <span class="method-start">453 ms</span>
+                <span class="method-start">35363 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">462 ms</span>
+                <span class="method-start">48833 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">462 ms</span>
+                <span class="method-name">afterMethod([TestResult name=validateProductOnProductDetails status=FAILURE method=ProductTest.validateProductOn...)</span>
+                <span class="method-start">50616 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">463 ms</span>
+                <span class="method-start">51642 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">464 ms</span>
+                <span class="method-name">beforeMethod(public void com.qa.tests.ProductTest.validateProductOnProductPage())</span>
+                <span class="method-start">52118 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">validateProductOnProductPage</span>
-                <span class="method-start">465 ms</span>
+                <span class="method-start">55465 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">467 ms</span>
+                <span class="method-start">57272 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">468 ms</span>
+                <span class="method-name">afterMethod([TestResult name=validateProductOnProductPage status=FAILURE method=ProductTest.validateProductOnPro...)</span>
+                <span class="method-start">59340 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">469 ms</span>
+                <span class="method-start">60894 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.tests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">472 ms</span>
+                <span class="method-start">60896 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
