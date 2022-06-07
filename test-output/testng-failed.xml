@@ -11,38 +11,10 @@
     <parameter name="platformName" value="Android"/>
     <parameter name="udid" value="emulator-5554"/>
     <parameter name="unlockKey" value=" "/>
-    <parameter name="deviceName" value="pixel_3"/>
-    <parameter name="avd" value="AndroidCurso"/>
+    <parameter name="deviceName" value="pixel_2"/>
+    <parameter name="avd" value="Pixel5_Android11"/>
     <parameter name="systemPort" value="10000"/>
     <classes>
-      <class name="com.qa.tests.LogoutTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterTest"/>
-          <include name="beforeClass"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="successfulLogout"/>
-        </methods>
-      </class> <!-- com.qa.tests.LogoutTest -->
-      <class name="com.qa.tests.LoginTests">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterTest"/>
-          <include name="invalidUserName"/>
-          <include name="beforeClass"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-          <include name="invalidPassword"/>
-          <include name="successfulLogin"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- com.qa.tests.LoginTests -->
       <class name="com.qa.tests.ProductTest">
         <methods>
           <include name="validateProductOnProductPage"/>
